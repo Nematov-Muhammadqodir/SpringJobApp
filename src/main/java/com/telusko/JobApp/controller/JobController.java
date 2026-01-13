@@ -16,18 +16,15 @@ public class JobController {
     @Autowired
     private JobService service;
 
-
-    @GetMapping({"/", "home"})
+    @GetMapping({ "/", "home" })
     public String home() {
         return "home";
     }
-
 
     @GetMapping("addjob")
     public String addJob() {
         return "addjob";
     }
-
 
     @PostMapping("handleForm")
     public String handleForm(JobPost jobPost) {
